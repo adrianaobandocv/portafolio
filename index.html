@@ -259,7 +259,7 @@ html.light .fn-badge.init{color:#626BCB;border-color:rgba(133,139,214,.40);backg
 
 .cert-item{padding:14px 0;border-bottom:1px solid var(--line);display:flex;gap:14px}
 .cert-item:last-child{border-bottom:none}
-.cert-icon{font-family:var(--display);font-style:italic;font-size:24px;color:var(--amber);line-height:1;flex-shrink:0}
+.cert-icon{font-family:var(--body);font-weight:600;font-size:18px;color:var(--amber);line-height:1;flex-shrink:0;width:22px;text-align:right}
 .cert-name{font-size:14px;color:var(--ink);line-height:1.4;margin-bottom:3px}
 .cert-org{font-size:12px;color:var(--muted);font-family:var(--mono);letter-spacing:.05em}
 
@@ -342,14 +342,19 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
 .init-grid{gap:14px}
 .init-card{padding:22px 22px}
 .init-num{margin-bottom:12px;font-size:9.5px}
-.init-title{font-size:24px;margin-bottom:10px;line-height:1.12}
 .init-desc{font-size:13px;line-height:1.6}
 
 /* valor */
 .valor-item{padding:22px 22px}
 .valor-num{font-size:48px;margin-bottom:12px}
-.valor-title{font-size:18px;margin-bottom:10px}
 .valor-desc{font-size:13px;line-height:1.6}
+
+/* recuadros — título legible (DM Sans) en todas las secciones */
+.area-name{font-family:var(--body);font-weight:500;font-size:15px;letter-spacing:0;color:var(--ink);line-height:1.25}
+.auto-title{font-family:var(--body);font-weight:500;font-size:15px;letter-spacing:0;color:var(--ink);margin-bottom:8px;line-height:1.25}
+.init-title{font-family:var(--body);font-weight:600;font-size:18px;letter-spacing:-.005em;color:var(--ink);line-height:1.25;margin-bottom:10px}
+.init-title .em{font-weight:500;color:var(--amber)}
+.valor-title{font-family:var(--body);font-weight:500;font-size:16px;letter-spacing:0;color:var(--ink);line-height:1.25;margin-bottom:10px}
 
 /* profile */
 .profile-grid{gap:32px}
@@ -381,7 +386,7 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
 .auto-item-header{padding:14px 18px;display:flex;align-items:center;gap:14px;position:relative}
 .auto-item-header .auto-num{margin-bottom:0;flex-shrink:0;width:56px}
 .auto-item-header .auto-num::after{display:none}
-.auto-item-header .auto-title{margin-bottom:0;flex:1;font-size:15px;line-height:1.2}
+.auto-item-header .auto-title{margin-bottom:0;flex:1;font-size:14.5px;line-height:1.25;font-family:var(--body);font-weight:500}
 .auto-item-header .auto-chevron{width:18px;height:18px;color:var(--muted);transition:transform .35s,color .25s;flex-shrink:0;font-size:14px;display:flex;align-items:center;justify-content:center}
 .auto-item:hover .auto-item-header .auto-chevron{color:var(--amber)}
 .auto-item.open .auto-item-header .auto-chevron{transform:rotate(45deg);color:var(--amber)}
@@ -468,7 +473,7 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
     </h1>
     <div class="hero-subtitle">Psicología organizacional, automatización con propósito.</div>
     <p class="hero-bio">
-      Psicóloga en formación de último semestre en la <strong>Pontificia Universidad Javeriana Cali</strong>, con enfoque organizacional, diplomado en Talento Humano y coterminales de especialización en Procesos Humanos. Actualmente <strong>practicante de dos áreas de RRHH en Globant Cali</strong>, donde combino mirada psicológica con la automatización de procesos.
+      Psicóloga en formación de último semestre en la <strong>Pontificia Universidad Javeriana Cali</strong>, con enfoque organizacional, diplomado en Talento Humano y coterminales de especialización en Procesos Humanos. Actualmente <strong>practicante de dos áreas de RRHH en Globant</strong>, donde combino mirada psicológica con la automatización de procesos.
     </p>
     <div class="hero-meta">
       <div class="item">Cali, Colombia</div>
@@ -482,7 +487,7 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
       <img src="photo.jpg" alt="Adriana Obando Mora" onerror="this.style.display='none';this.parentNode.querySelector('.placeholder').style.display='flex'">
       <div class="placeholder" style="display:none">AO</div>
     </div>
-    <div class="frame-label">Retrato · 04:25</div>
+    <div class="frame-label"></div>
   </div>
 
   <div class="scroll-cue">
@@ -522,16 +527,16 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
       <div class="menu-desc">Proyectos propuestos y liderados</div>
       <div class="menu-arrow">→</div>
     </button>
-    <button class="menu-item" data-pane="valor">
-      <div class="menu-num">05</div>
-      <div class="menu-title">Valor agregado</div>
-      <div class="menu-desc">Impacto cualitativo al área</div>
-      <div class="menu-arrow">→</div>
-    </button>
     <button class="menu-item" data-pane="impacto">
-      <div class="menu-num">06</div>
+      <div class="menu-num">05</div>
       <div class="menu-title">Impacto</div>
       <div class="menu-desc">Métricas, tiempos ahorrados y línea de tiempo</div>
+      <div class="menu-arrow">→</div>
+    </button>
+    <button class="menu-item" data-pane="valor">
+      <div class="menu-num">06</div>
+      <div class="menu-title">Valor agregado</div>
+      <div class="menu-desc">Impacto cualitativo al área</div>
       <div class="menu-arrow">→</div>
     </button>
   </nav>
@@ -552,7 +557,7 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
     <div>
       <div class="profile-section reveal">
         <div class="profile-section-title">Contacto</div>
-        <div class="profile-row"><span class="k">Email</span><span class="v"><a href="/cdn-cgi/l/email-protection#462722342f272827292427282229253006212b272f2a6825292b"><span class="__cf_email__" data-cfemail="177673657e767976787576797378746157707a767e7b3974787a">[email&#160;protected]</span></a></span></div>
+        <div class="profile-row"><span class="k">Email</span><span class="v"><a href="/cdn-cgi/l/email-protection#8feeebfde6eee1eee0edeee1ebe0ecf9cfe8e2eee6e3a1ece0e2"><span class="__cf_email__" data-cfemail="5b3a3f29323a353a34393a353f34382d1b3c363a323775383436">[email&#160;protected]</span></a></span></div>
         <div class="profile-row"><span class="k">Teléfono</span><span class="v">318 249 0701</span></div>
         <div class="profile-row"><span class="k">Ubicación</span><span class="v">Cali, Colombia</span></div>
         <div class="profile-row"><span class="k">Empresa</span><span class="v">Globant — desde ene 2026</span></div>
@@ -589,21 +594,21 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
       <div class="profile-section reveal">
         <div class="profile-section-title">Certificados</div>
         <div class="cert-item">
-          <div class="cert-icon">i.</div>
+          <div class="cert-icon">1</div>
           <div>
             <div class="cert-name">Diplomado en Gestión del Talento Humano</div>
             <div class="cert-org">Corp. Int. Líderes Latinoamérica ONG</div>
           </div>
         </div>
         <div class="cert-item">
-          <div class="cert-icon">ii.</div>
+          <div class="cert-icon">2</div>
           <div>
             <div class="cert-name">Fundamentos estratégicos de la gestión del talento humano</div>
             <div class="cert-org">Corp. Int. Líderes Latinoamérica ONG</div>
           </div>
         </div>
         <div class="cert-item">
-          <div class="cert-icon">iii.</div>
+          <div class="cert-icon">3</div>
           <div>
             <div class="cert-name">Legislación laboral y bienestar organizacional</div>
             <div class="cert-org">Corp. Int. Líderes Latinoamérica ONG</div>
@@ -623,11 +628,11 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         </div>
         <div class="recog-item">
           <div class="recog-num">★</div>
-          <div class="recog-text"><strong>Top 1 Global de Estrellas</strong> en Mayo dentro de Globant por desempeño e impacto.</div>
+          <div class="recog-text">Top 1 Global de Estrellas (reconocimientos) en Mayo en Globant por desempeño e impacto.</div>
         </div>
         <div class="recog-item">
           <div class="recog-num">★</div>
-          <div class="recog-text">Elegida para exponer su experiencia y casos de éxito ante la <strong>comunidad de practicantes de Globant</strong>.</div>
+          <div class="recog-text">Elegida para exponer su experiencia y caso de éxito ante la comunidad de practicantes de Globant.</div>
         </div>
       </div>
     </div>
@@ -650,7 +655,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
       <div class="area-header">
         <span class="area-num">01</span>
         <div class="area-name">Engagement</div>
-        <div class="area-count">3 funciones</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
@@ -665,7 +669,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
       <div class="area-header">
         <span class="area-num">02</span>
         <div class="area-name">Conexión &amp; Comunidad</div>
-        <div class="area-count">3 funciones</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
@@ -680,7 +683,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
       <div class="area-header">
         <span class="area-num">03</span>
         <div class="area-name">Aliados y Beneficios</div>
-        <div class="area-count">3 funciones</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
@@ -695,7 +697,9 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         <div class="area-header">
           <span class="area-num">04</span>
           <div class="area-name">Programa de Acompañamiento Parental</div>
-          <div class="area-count">7 automatizaciones</div>
+    <button class="show-more-btn" data-extra="extra-tcbp">
+      <span class="plus">+</span><span class="label">MOSTRAR MÁS FUNCIONES</span>
+    </button>
           <div class="area-chevron">+</div>
         </div>
         <div class="area-body"><div class="area-content">
@@ -708,7 +712,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         <div class="area-header">
           <span class="area-num">05</span>
           <div class="area-name">Onboarding — New Hires</div>
-          <div class="area-count">2 automatizaciones</div>
           <div class="area-chevron">+</div>
         </div>
         <div class="area-body"><div class="area-content">
@@ -722,7 +725,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         <div class="area-header">
           <span class="area-num">06</span>
           <div class="area-name">Red de Talento Interno</div>
-          <div class="area-count">3 funciones</div>
           <div class="area-chevron">+</div>
         </div>
         <div class="area-body"><div class="area-content">
@@ -737,7 +739,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         <div class="area-header">
           <span class="area-num">07</span>
           <div class="area-name">Detalle de Luto</div>
-          <div class="area-count">2 funciones</div>
           <div class="area-chevron">+</div>
         </div>
         <div class="area-body"><div class="area-content">
@@ -751,7 +752,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         <div class="area-header">
           <span class="area-num">08</span>
           <div class="area-name">Moderador de Canales Internos</div>
-          <div class="area-count">2 funciones</div>
           <div class="area-chevron">+</div>
         </div>
         <div class="area-body"><div class="area-content">
@@ -765,7 +765,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         <div class="area-header">
           <span class="area-num">09</span>
           <div class="area-name">Soporte y Comunidad Cali</div>
-          <div class="area-count">3 funciones</div>
           <div class="area-chevron">+</div>
         </div>
         <div class="area-body"><div class="area-content">
@@ -776,9 +775,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         </div></div>
       </div>
     </div>
-    <button class="show-more-btn" data-extra="extra-tcbp">
-      <span class="plus">+</span><span class="label">Mostrar 6 funciones más</span>
-    </button>
   </div>
 
   <div class="card reveal">
@@ -788,7 +784,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
       <div class="area-header">
         <span class="area-num">01</span>
         <div class="area-name">Afiliaciones EPS</div>
-        <div class="area-count">2 funciones</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
@@ -802,7 +797,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
       <div class="area-header">
         <span class="area-num">02</span>
         <div class="area-name">Afiliaciones a Caja de Compensación</div>
-        <div class="area-count">2 funciones</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
@@ -816,7 +810,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
       <div class="area-header">
         <span class="area-num">03</span>
         <div class="area-name">Recobro de Incapacidades</div>
-        <div class="area-count">3 funciones</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
@@ -832,7 +825,9 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         <div class="area-header">
           <span class="area-num">04</span>
           <div class="area-name">Bajas de ARL</div>
-          <div class="area-count">2 funciones</div>
+    <button class="show-more-btn" data-extra="extra-pj">
+      <span class="plus">+</span><span class="label">MOSTRAR MÁS FUNCIONES</span>
+    </button>
           <div class="area-chevron">+</div>
         </div>
         <div class="area-body"><div class="area-content">
@@ -846,7 +841,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         <div class="area-header">
           <span class="area-num">05</span>
           <div class="area-name">Correos con Documentos de Salida</div>
-          <div class="area-count">2 funciones</div>
           <div class="area-chevron">+</div>
         </div>
         <div class="area-body"><div class="area-content">
@@ -860,7 +854,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         <div class="area-header">
           <span class="area-num">06</span>
           <div class="area-name">Gestión Documental</div>
-          <div class="area-count">3 funciones</div>
           <div class="area-chevron">+</div>
         </div>
         <div class="area-body"><div class="area-content">
@@ -875,7 +868,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         <div class="area-header">
           <span class="area-num">07</span>
           <div class="area-name">Periodos de Prueba</div>
-          <div class="area-count">3 funciones</div>
           <div class="area-chevron">+</div>
         </div>
         <div class="area-body"><div class="area-content">
@@ -886,9 +878,6 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         </div></div>
       </div>
     </div>
-    <button class="show-more-btn" data-extra="extra-pj">
-      <span class="plus">+</span><span class="label">Mostrar 4 funciones más</span>
-    </button>
   </div>
 </div>
 
@@ -904,46 +893,46 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
   <div class="card reveal">
     <div class="card-title"><span class="card-title-num">A</span>TCBP <span class="em">— 10 flujos</span></div>
     <div class="auto-grid">
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">01 / 10</div><div class="auto-title">Correos seguridad NH</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Envío automático de datos de new hires al área de seguridad.</div><div class="auto-stat">49 correos desde 13 feb · AppScript + Gmail</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Onboarding</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">02 / 10</div><div class="auto-title">Correos detalle de luto</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Correos automáticos de aprobación del jefe ante situaciones de luto.</div><div class="auto-stat">76 correos · 5 seg para 50 vs. 2 min por correo antes</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Luto</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">03 / 10</div><div class="auto-title">Entrenamientos mandatorios</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Recordatorio automático en Google Calendar para new hires con entrenamientos obligatorios.</div><div class="auto-stat">104 recordatorios desde 30 mar · Calendar</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Calendar</span><span class="tool-chip">Onboarding</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">04 / 10</div><div class="auto-title">Sincronización de datos NH</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Información de new hires se trae automáticamente a 2 archivos corporativos.</div><div class="auto-stat">Sync en tiempo real · AppScript + Sheets</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">Onboarding</span></div></div>
+      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">01</div><div class="auto-title">Correos seguridad NH</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Envío automático de datos de new hires al área de seguridad.</div><div class="auto-stat">49 correos desde 13 feb · AppScript + Gmail</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Onboarding</span></div></div>
+      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">02</div><div class="auto-title">Correos detalle de luto</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Correos automáticos de aprobación del jefe ante situaciones de luto.</div><div class="auto-stat">76 correos · 5 seg para 50 vs. 2 min por correo antes</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Luto</span></div></div>
+      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">03</div><div class="auto-title">Entrenamientos mandatorios</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Recordatorio automático en Google Calendar para new hires con entrenamientos obligatorios.</div><div class="auto-stat">104 recordatorios desde 30 mar · Calendar</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Calendar</span><span class="tool-chip">Onboarding</span></div></div>
+      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">04</div><div class="auto-title">Sincronización de datos NH</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Información de new hires se trae automáticamente a 2 archivos corporativos.</div><div class="auto-stat">Sync en tiempo real · AppScript + Sheets</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">Onboarding</span></div></div>
       <div class="auto-extra" id="auto-extra-tcbp">
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">05 / 10</div><div class="auto-title">Base de datos de activos</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Colaboradores activos siempre actualizados sin descargar informes diarios.</div><div class="auto-stat">Actualización diaria automática · Iniciativa propia</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">Iniciativa</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">06 / 10</div><div class="auto-title">Lista cumpleañeros PPT</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Presentación semanal automática para Bogotá, Medellín, Cali y Eje Cafetero.</div><div class="auto-stat">Revisa 6.000 filas · Genera en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Slides</span><span class="tool-chip">Comunidad</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">07 / 10</div><div class="auto-title">Acompañamiento Parental</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">7 flujos en uno: 6 correos secuenciados (bienvenida → diploma) + invitación Calendar.</div><div class="auto-stat">Proceso 100% autónomo con triggers</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Calendar</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">08 / 10</div><div class="auto-title">Página de Gift Cards</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Plataforma web interactiva — colaboradores eligen su gift card sin intervención manual.</div><div class="auto-stat">HTML/CSS/JS · Iniciativa propia</div></div></div><div class="auto-tags"><span class="tool-chip">HTML</span><span class="tool-chip">JavaScript</span><span class="tool-chip">Comunidad</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">09 / 10</div><div class="auto-title">Red de Talento Interno</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Cartas de labor automáticas + 4 correos de incumplimiento + mensajes masivos Slack.</div><div class="auto-stat">AppScript + Gmail + Slack + Docs</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Slack</span><span class="tool-chip">Docs</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">10 / 10</div><div class="auto-title">Código de Ética</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Correo automático notificando incumplimientos del código con documento adjunto.</div><div class="auto-stat">Iniciativa propia · AppScript + Gmail</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Slack</span></div></div>
-      </div>
-    </div>
+        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">05</div>
     <button class="show-more-btn" data-extra="auto-extra-tcbp">
       <span class="plus">+</span><span class="label">Ver 6 automatizaciones más</span>
-    </button>
+    </button><div class="auto-title">Base de datos de activos</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Colaboradores activos siempre actualizados sin descargar informes diarios.</div><div class="auto-stat">Actualización diaria automática · Iniciativa propia</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">Iniciativa</span></div></div>
+        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">06</div><div class="auto-title">Lista cumpleañeros PPT</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Presentación semanal automática para Bogotá, Medellín, Cali y Eje Cafetero.</div><div class="auto-stat">Revisa 6.000 filas · Genera en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Slides</span><span class="tool-chip">Comunidad</span></div></div>
+        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">07</div><div class="auto-title">Acompañamiento Parental</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">7 flujos en uno: 6 correos secuenciados (bienvenida → diploma) + invitación Calendar.</div><div class="auto-stat">Proceso 100% autónomo con triggers</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Calendar</span></div></div>
+        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">08</div><div class="auto-title">Página de Gift Cards</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Plataforma web interactiva — colaboradores eligen su gift card sin intervención manual.</div><div class="auto-stat">HTML/CSS/JS · Iniciativa propia</div></div></div><div class="auto-tags"><span class="tool-chip">HTML</span><span class="tool-chip">JavaScript</span><span class="tool-chip">Comunidad</span></div></div>
+        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">09</div><div class="auto-title">Red de Talento Interno</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Cartas de labor automáticas + 4 correos de incumplimiento + mensajes masivos Slack.</div><div class="auto-stat">AppScript + Gmail + Slack + Docs</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Slack</span><span class="tool-chip">Docs</span></div></div>
+        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">10</div><div class="auto-title">Código de Ética</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Correo automático notificando incumplimientos del código con documento adjunto.</div><div class="auto-stat">Iniciativa propia · AppScript + Gmail</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Slack</span></div></div>
+      </div>
+    </div>
   </div>
 
   <div class="card reveal">
     <div class="card-title"><span class="card-title-num">B</span>People Journey <span class="em">— 7 flujos</span></div>
     <div class="auto-grid">
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">11 / 17</div><div class="auto-title">EPS masiva e individual</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Formularios PDF de afiliación EPS + correo automático con adjunto para el asesor.</div><div class="auto-stat">10 min/persona → 30 personas en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">EPS</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">12 / 17</div><div class="auto-title">ARL Altas</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Documentos de afiliación a ARL generados automáticamente.</div><div class="auto-stat">2 min/persona → 50 en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">ARL</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">13 / 17</div><div class="auto-title">ARL Bajas</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Documentos de retiro de ARL para colaboradores en proceso de salida.</div><div class="auto-stat">2 min/persona → 50 en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">ARL</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">14 / 17</div><div class="auto-title">Cajas de Compensación</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Afiliaciones y retiros de caja de compensación (Colfondos) automatizados.</div><div class="auto-stat">8 min/persona → 30 en 5 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">Colfondos</span></div></div>
+      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">11</div><div class="auto-title">EPS masiva e individual</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Formularios PDF de afiliación EPS + correo automático con adjunto para el asesor.</div><div class="auto-stat">10 min/persona → 30 personas en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">EPS</span></div></div>
+      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">12</div><div class="auto-title">ARL Altas</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Documentos de afiliación a ARL generados automáticamente.</div><div class="auto-stat">2 min/persona → 50 en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">ARL</span></div></div>
+      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">13</div><div class="auto-title">ARL Bajas</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Documentos de retiro de ARL para colaboradores en proceso de salida.</div><div class="auto-stat">2 min/persona → 50 en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">ARL</span></div></div>
+      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">14</div><div class="auto-title">Cajas de Compensación</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Afiliaciones y retiros de caja de compensación (Colfondos) automatizados.</div><div class="auto-stat">8 min/persona → 30 en 5 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">Colfondos</span></div></div>
       <div class="auto-extra" id="auto-extra-pj">
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">15 / 17</div><div class="auto-title">Renombrar documentos</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Renombrado masivo con Python — 3 tipos de documentos.</div><div class="auto-stat">20 min/100 → 5 seg · Python + Colab</div></div></div><div class="auto-tags"><span class="tool-chip">Python</span><span class="tool-chip">Colab</span><span class="tool-chip">Docs</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">16 / 17</div><div class="auto-title">Correos periodos de prueba</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Correos masivos automáticos al jefe para feedback en periodo de prueba.</div><div class="auto-stat">212 correos desde 13 feb · Iniciativa</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Iniciativa</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">17 / 17</div><div class="auto-title">Cartas de salida</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">5 tipos de carta generadas y enviadas: renuncia, terminación, mutuo acuerdo, prueba, practicantes.</div><div class="auto-stat">367 cartas desde 6 feb</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Docs</span></div></div>
-      </div>
-    </div>
+        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">15</div>
     <button class="show-more-btn" data-extra="auto-extra-pj">
       <span class="plus">+</span><span class="label">Ver 3 automatizaciones más</span>
-    </button>
+    </button><div class="auto-title">Renombrar documentos</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Renombrado masivo con Python — 3 tipos de documentos.</div><div class="auto-stat">20 min/100 → 5 seg · Python + Colab</div></div></div><div class="auto-tags"><span class="tool-chip">Python</span><span class="tool-chip">Colab</span><span class="tool-chip">Docs</span></div></div>
+        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">16</div><div class="auto-title">Correos periodos de prueba</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Correos masivos automáticos al jefe para feedback en periodo de prueba.</div><div class="auto-stat">212 correos desde 13 feb · Iniciativa</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Iniciativa</span></div></div>
+        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">17</div><div class="auto-title">Cartas de salida</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">5 tipos de carta generadas y enviadas: renuncia, terminación, mutuo acuerdo, prueba, practicantes.</div><div class="auto-stat">367 cartas desde 6 feb</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Docs</span></div></div>
+      </div>
+    </div>
   </div>
 
   <div class="card reveal">
     <div class="card-title"><span class="card-title-num">C</span>Compartidas <span class="em">— continuidad</span></div>
     <div class="auto-grid">
-      <div class="auto-item" style="grid-column:1/-1"><div class="auto-item-header"><div class="auto-num">18 / 18</div><div class="auto-title">Manuales interactivos</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Paso a paso con videos tutoriales, links a carpetas, documentos y páginas para cada automatización — garantiza continuidad ante rotación.</div><div class="auto-stat">Un manual por automatización · cubre las 18</div></div></div><div class="auto-tags"><span class="tool-chip">Google Sites</span><span class="tool-chip">Video</span><span class="tool-chip">Continuidad</span></div></div>
+      <div class="auto-item" style="grid-column:1/-1"><div class="auto-item-header"><div class="auto-num">18</div><div class="auto-title">Manuales interactivos</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Paso a paso con videos tutoriales, links a carpetas, documentos y páginas para cada automatización — garantiza continuidad ante rotación.</div><div class="auto-stat">Un manual por automatización · cubre las 18</div></div></div><div class="auto-tags"><span class="tool-chip">Google Sites</span><span class="tool-chip">Video</span><span class="tool-chip">Continuidad</span></div></div>
     </div>
   </div>
 </div>
@@ -970,7 +959,7 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
 <div class="pane" id="pane-valor">
   <div class="pane-header reveal">
     <div>
-      <div class="pane-eyebrow">Sección 05</div>
+      <div class="pane-eyebrow">Sección 06</div>
       <h2>Valor <span class="em">agregado</span> al área.</h2>
     </div>
     <div class="pane-meta">Impacto cualitativo en TCBP y People Journey</div>
@@ -989,7 +978,7 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
 <div class="pane" id="pane-impacto">
   <div class="pane-header reveal">
     <div>
-      <div class="pane-eyebrow">Sección 06</div>
+      <div class="pane-eyebrow">Sección 05</div>
       <h2>Impacto <span class="em">medible.</span></h2>
     </div>
     <div class="pane-meta">Métricas · Tiempos · Línea de tiempo</div>
@@ -1155,6 +1144,7 @@ html:not(.light) .theme-toggle .moon,html.light .theme-toggle .sun{color:var(--a
         if (id === 'auto-extra-pj') label.textContent = 'Ver 3 automatizaciones más';
         plus.textContent = '+';
       }
+      /* compensar: que el botón quede donde estaba (la lista se abre por encima) */
       requestAnimationFrame(() => {
         const newTop = btn.getBoundingClientRect().top;
         const delta = newTop - btnTop;
