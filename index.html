@@ -45,8 +45,8 @@
 
 html.light {
   /* LIGHT (predeterminado) */
-  --bg:#F5F1E8;
-  --bg-2:#EDE7D9;
+  --bg:#FBFAF6;
+  --bg-2:#F2EFE7;
   --ink:#1A1E26;
   --ink-2:#2A2F3A;
   --muted:#6F6A5C;
@@ -331,10 +331,13 @@ html.light .hero-photo-small{box-shadow: 0 6px 18px rgba(59,85,104,.12)}
 .area-content{padding:4px 4px 18px 44px}
 @media(max-width:560px){.area-content{padding-left:4px}}
 
+.area-intro{font-size:13px;line-height:1.6;color:var(--ink-2);padding:0 0 12px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+.area-intro b{color:var(--amber);font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:5px;font-weight:500}
 .fn-item{display:flex;align-items:flex-start;gap:14px;padding:8px 0;border-bottom:1px solid var(--line)}
 .fn-item:last-child{border-bottom:none}
 .fn-dot{width:5px;height:5px;border-radius:50%;background:var(--ink-2);margin-top:9px;flex-shrink:0}
 .fn-text{font-size:13px;line-height:1.6;color:var(--ink-2);flex:1}
+.fn-text strong{color:var(--ink);font-weight:600}
 .fn-badge{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border:1px solid;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-right:8px;border-radius:999px}
 .fn-badge.auto{color:var(--amber);border-color:rgba(151,177,196,.45);background:rgba(151,177,196,.10)}
 .fn-badge.init{color:var(--teal);border-color:rgba(180,199,213,.45);background:rgba(180,199,213,.10)}
@@ -369,6 +372,25 @@ html.light .fn-badge.init{color:#7E9FB7;border-color:rgba(151,177,196,.40);backg
 .auto-extra{display:none}
 .auto-extra.open{display:contents}
 
+.auto-summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 0 22px;margin-bottom:6px}
+.auto-summary b{font-family:var(--display);font-style:italic;font-size:34px;letter-spacing:-.01em;color:var(--amber);text-transform:none}
+.auto-cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:760px){.auto-cat-grid{grid-template-columns:1fr}}
+.auto-cat{border:1px solid var(--line);background:var(--surface);padding:24px 22px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .35s,background .35s}
+.auto-cat:hover{transform:translateY(-3px);background:var(--surface-2)}
+.auto-cat-top{display:flex;align-items:flex-start;gap:16px;margin-bottom:14px}
+.auto-cat-count{font-family:var(--display);font-style:italic;font-size:46px;line-height:.85;color:var(--amber);flex-shrink:0;text-align:center}
+.auto-cat-count small{font-family:var(--mono);font-style:normal;font-size:9px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;display:block;margin-top:6px}
+.auto-cat-name{font-family:var(--body);font-weight:600;font-size:17px;line-height:1.25;color:var(--ink);align-self:center}
+.auto-cat-desc{font-size:13px;line-height:1.6;color:var(--ink-2);margin-bottom:14px;flex:1}
+.auto-cat-metric{font-family:var(--mono);font-size:10px;letter-spacing:.04em;color:var(--ink);text-transform:uppercase;padding:10px 12px;background:var(--surface-2);border-left:2px solid var(--amber);margin-bottom:12px;line-height:1.55}
+.auto-impact{font-size:12.5px;line-height:1.6;color:var(--ink-2);margin-bottom:14px}
+.auto-impact b{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;font-weight:500}
+.auto-metric-grid{display:flex;gap:10px;margin-bottom:14px}
+.auto-metric{flex:1;padding:11px 13px;background:var(--surface-2);border-left:2px solid var(--amber)}
+.auto-metric .v{font-family:var(--display);font-style:italic;font-size:24px;line-height:1;color:var(--amber);letter-spacing:-.01em}
+.auto-metric .k{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px;line-height:1.4}
+
 .init-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 @media(max-width:760px){.init-grid{grid-template-columns:1fr}}
 .init-card{padding:22px 22px;border:1px solid var(--line);background:var(--surface);position:relative;overflow:hidden;transition:transform .35s,background .35s}
@@ -379,6 +401,9 @@ html.light .fn-badge.init{color:#7E9FB7;border-color:rgba(151,177,196,.40);backg
 .init-title{font-family:var(--body);font-weight:600;font-size:18px;letter-spacing:-.005em;color:var(--ink);line-height:1.25;margin-bottom:10px}
 .init-title .em{font-weight:500;color:var(--amber)}
 .init-desc{font-size:13px;line-height:1.6;color:var(--ink-2);position:relative;z-index:1}
+.init-desc b,.init-aporta b{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;font-weight:500}
+.init-aporta{font-size:13px;line-height:1.6;color:var(--ink-2);margin-top:13px;padding-top:13px;border-top:1px solid var(--line);position:relative;z-index:1}
+.init-aporta b{color:var(--amber)}
 
 .valor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 @media(max-width:960px){.valor-grid{grid-template-columns:repeat(2,1fr)}}
@@ -560,7 +585,7 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
 
     <div class="hero-subtitle">Psicología organizacional, automatización con propósito.</div>
     <p class="hero-bio">
-      Psicóloga en formación de último semestre en la <strong>Pontificia Universidad Javeriana Cali</strong>, con enfoque organizacional, diplomado en Talento Humano y coterminales de especialización en Procesos Humanos. Actualmente <strong>practicante de dos áreas de RRHH en Globant</strong>, donde combino mirada psicológica con la automatización de procesos.
+      Psicóloga de la <strong>Pontificia Universidad Javeriana Cali</strong>, a la espera de ceremonia de grado, con enfoque organizacional, diplomados en Talento Humano y Selección y coterminales de especialización en Desarrollo Organizacional. Actualmente <strong>practicante en dos áreas de RRHH en Globant</strong>, combinando la mirada psicológica del talento con la automatización de procesos.
     </p>
     <div class="hero-meta">
       <div class="item">Cali, Colombia</div>
@@ -605,8 +630,8 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
     <div class="side-menu-item" data-pane="iniciativas">
       <div class="side-menu-num">04</div>
       <div>
-        <div class="side-menu-title">Iniciativas propias</div>
-        <div class="side-menu-desc">Proyectos de valor propuestos y liderados autónomamente</div>
+        <div class="side-menu-title">Iniciativas y valor agregado</div>
+        <div class="side-menu-desc">Proyectos propios y su aporte cualitativo al área</div>
       </div>
       <div class="side-menu-arrow">→</div>
     </div>
@@ -616,15 +641,6 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
       <div>
         <div class="side-menu-title">Impacto medible</div>
         <div class="side-menu-desc">Métricas de rendimiento, tiempos y línea de tiempo</div>
-      </div>
-      <div class="side-menu-arrow">→</div>
-    </div>
-
-    <div class="side-menu-item" data-pane="valor">
-      <div class="side-menu-num">06</div>
-      <div>
-        <div class="side-menu-title">Valor agregado</div>
-        <div class="side-menu-desc">Aporte cualitativo y transformación cultural del área</div>
       </div>
       <div class="side-menu-arrow">→</div>
     </div>
@@ -646,7 +662,7 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
     <div>
       <div class="profile-section reveal">
         <div class="profile-section-title">Contacto</div>
-        <div class="profile-row"><span class="k">Email</span><span class="v"><a href="mailto:adrianaobandocv@gmail.com">adrianaobandocv@gmail.com</a></span></div>
+        <div class="profile-row"><span class="k">Email</span><span class="v">adrianaobandocv@gmail.com</span></div>
         <div class="profile-row"><span class="k">Teléfono</span><span class="v">318 249 0701</span></div>
         <div class="profile-row"><span class="k">Ubicación</span><span class="v">Cali, Colombia</span></div>
         <div class="profile-row"><span class="k">Empresa</span><span class="v">Globant — desde ene 2026</span></div>
@@ -655,8 +671,8 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
 
       <div class="profile-section reveal">
         <div class="profile-section-title">Áreas en Globant</div>
-        <div class="profile-row"><span class="k">TCBP</span><span class="v">Talent and Culture Business Partner</span></div>
-        <div class="profile-row"><span class="k">People Journey</span><span class="v">Gestión administrativa</span></div>
+        <div class="profile-row"><span class="k">Talent and Culture Business Partner (TCBP)</span><span class="v">Cultura, desarrollo y desempeño</span></div>
+        <div class="profile-row"><span class="k">People Journey</span><span class="v">Gestión de Seguridad Social</span></div>
       </div>
 
       <div class="profile-section reveal">
@@ -684,21 +700,21 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
         <div class="cert-item">
           <div class="cert-icon">1</div>
           <div>
-            <div class="cert-name">Diplomado en Gestión del Talento Humano</div>
-            <div class="cert-org">Corp. Int. Líderes Latinoamérica ONG</div>
+            <div class="cert-name">Diplomado en Reclutamiento y Selección de Personal</div>
+            <div class="cert-org">Udemy</div>
           </div>
         </div>
         <div class="cert-item">
           <div class="cert-icon">2</div>
           <div>
-            <div class="cert-name">Curso de Fundamentos estratégicos de la gestión del talento humano</div>
+            <div class="cert-name">Diplomado en Gestión del Talento Humano</div>
             <div class="cert-org">Corp. Int. Líderes Latinoamérica ONG</div>
           </div>
         </div>
         <div class="cert-item">
           <div class="cert-icon">3</div>
           <div>
-            <div class="cert-name">Curso de Legislación laboral y bienestar organizacional</div>
+            <div class="cert-name">Curso de Fundamentos estratégicos de la gestión del talento humano</div>
             <div class="cert-org">Corp. Int. Líderes Latinoamérica ONG</div>
           </div>
         </div>
@@ -738,128 +754,89 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
 
   <div class="card reveal">
     <div class="card-title"><span class="card-title-num">01</span>TCBP — Talent and <span class="em">Culture</span> Business Partner</div>
-
     <div class="area-group">
       <div class="area-header">
         <span class="area-num">01</span>
-        <div class="area-name">Engagement</div>
+        <div class="area-name">Clima y Cultura Organizacional</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en actualización de Engagement Data (eventos, satisfacción, asistencia, evidencias, presupuestos).</div></div>
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Planeación y realización de eventos.</div></div>
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Recolección de datos Cali para dashboard.</div></div>
-        <div class="tools-row"><span class="tool-chip">Google Sheets</span><span class="tool-chip">AppScript</span></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Gestión y acompañamiento en espacios de integración, identificando oportunidades para fortalecer el sentido de pertenencia y la comunicación interna.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en la consolidación y actualización de la información de clima y engagement de sedes Cali y Pereira (satisfacción, asistencia y presupuestos de eventos).</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en la organización de celebraciones y reconocimientos del equipo (cumpleaños, aniversarios y despedidas).</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Diseño y automatización de recursos de apoyo para la gestión de la cultura, como la presentación semanal de cumpleañeros a nivel nacional y página web para elegir regalo de cumpleaños.</div></div>
+        <div class="tools-row"><span class="tool-chip">Google Sheets</span><span class="tool-chip">AppScript</span><span class="tool-chip">Google Slides</span></div>
       </div></div>
     </div>
 
     <div class="area-group">
       <div class="area-header">
         <span class="area-num">02</span>
-        <div class="area-name">Conexión &amp; Comunidad</div>
+        <div class="area-name">Bienestar y Beneficios</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Celebración de cumpleaños, despedidas y aniversarios del equipo RRHH.</div></div>
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> PPT semanal automático de cumpleañeros para 4 ciudades — revisa 6.000 filas, genera presentación en 10 seg.</div></div>
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge init">Iniciativa</span> Página web para que colaboradores elijan gift cards — elimina proceso manual de consulta.</div></div>
-        <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Google Slides</span><span class="tool-chip">Google Sheets</span></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Gestión operativa de alianzas estratégicas, consolidando información sobre beneficios vigentes para garantizar una atención oportuna a las necesidades del personal.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Identificación y contacto de aliados corporativos para la ampliación del portafolio de beneficios a nivel regional.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Acompañamiento a colaboradores en procesos de maternidad y paternidad a través de una ruta estructurada de comunicaciones.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Gestión y acompañamiento en situaciones de duelo, apoyando los trámites de permisos y el envío de detalles de condolencia.</div></div>
+        <div class="tools-row"><span class="tool-chip">Gmail</span><span class="tool-chip">Google Sheets</span><span class="tool-chip">AppScript</span><span class="tool-chip">Google Calendar</span></div>
       </div></div>
     </div>
 
     <div class="area-group">
       <div class="area-header">
         <span class="area-num">03</span>
-        <div class="area-name">Aliados y Beneficios</div>
+        <div class="area-name">Incorporación de Personal (Onboarding)</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Búsqueda de alianzas corporativas para Cali.</div></div>
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Reuniones con contactos corporativos para consolidar beneficios.</div></div>
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge init">Iniciativa</span> AudioVisión y EntreRíos — alianzas gestionadas de forma autónoma.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en la gestión del ingreso de nuevos colaboradores, incluyendo accesos de seguridad del edificio, bienvenida y registro de información.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Seguimiento al cumplimiento de los entrenamientos obligatorios de incorporación.</div></div>
+        <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Calendar</span></div>
       </div></div>
     </div>
 
     <div class="extra-items" id="extra-tcbp">
-      <div class="area-group">
-        <div class="area-header">
-          <span class="area-num">04</span>
-          <div class="area-name">Programa de Acompañamiento Parental</div>
-          <div class="area-chevron">+</div>
-        </div>
-        <div class="area-body"><div class="area-content">
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">7 Auto</span> 7 automatizaciones en un solo archivo: 6 flujos de correos (bienvenida → diploma) + 1 invitation automática a Google Calendar.</div></div>
-          <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Calendar</span><span class="tool-chip">Google Sheets</span></div>
-        </div></div>
+    <div class="area-group">
+      <div class="area-header">
+        <span class="area-num">04</span>
+        <div class="area-name">Acompañamiento y Desarrollo del Talento Interno</div>
+        <div class="area-chevron">+</div>
       </div>
+      <div class="area-body"><div class="area-content">
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Asistencia a colaboradores a la espera de proyecto, con seguimiento al bienestar, dudas y cumplimiento de políticas de presencialidad.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en el desarrollo del talento mediante actividades de fortalecimiento de soft skills, la construcción de la hoja de vida y la simulación de entrevistas.</div></div>
+        <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Slack</span></div>
+      </div></div>
+    </div>
 
-      <div class="area-group">
-        <div class="area-header">
-          <span class="area-num">05</span>
-          <div class="area-name">Onboarding — New Hires</div>
-          <div class="area-chevron">+</div>
-        </div>
-        <div class="area-body"><div class="area-content">
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"> Gestión del ingreso al site, accesos de seguridad, bienvenida y recolección de datos personales de los New Hires.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> Correos automáticos a seguridad con datos de cada new hire — 49 correos enviados desde el 13 de febrero.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> Traer información NH a archivos corporativos + entrenamientos mandatorios (104 recordatorios Calendar desde el 30 mar).</div></div>
-          <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Sheets</span><span class="tool-chip">Google Calendar</span></div>
-        </div></div>
+    <div class="area-group">
+      <div class="area-header">
+        <span class="area-num">05</span>
+        <div class="area-name">Procesos Disciplinarios</div>
+        <div class="area-chevron">+</div>
       </div>
+      <div class="area-body"><div class="area-content">
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en los procesos disciplinarios de colaboradores a la espera de proyecto, con seguimiento a la asistencia presencial requerida.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Soporte en procesos disciplinarios derivados del incumplimiento del código de ética, incluyendo la gestión de las notificaciones formales.</div></div>
+        <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Slack</span></div>
+      </div></div>
+    </div>
 
-      <div class="area-group">
-        <div class="area-header">
-          <span class="area-num">06</span>
-          <div class="area-name">Red de Talento Interno</div>
-          <div class="area-chevron">+</div>
-        </div>
-        <div class="area-body"><div class="area-content">
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Sesiones de bienestar con colaboradores en espera de cliente, seguimiento de faltas y procesos disciplinarios.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> Generación automática de cartas de labor.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> Correos automáticos de incumplimiento + mensajes masivos en Slack.</div></div>
-          <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Docs</span><span class="tool-chip">Slack</span></div>
-        </div></div>
+    <div class="area-group">
+      <div class="area-header">
+        <span class="area-num">06</span>
+        <div class="area-name">Comunicación Interna</div>
+        <div class="area-chevron">+</div>
       </div>
-
-      <div class="area-group">
-        <div class="area-header">
-          <span class="area-num">07</span>
-          <div class="area-name">Detalle de Luto</div>
-          <div class="area-chevron">+</div>
-        </div>
-        <div class="area-body"><div class="area-content">
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Acompañamiento, gestión y envío de detalles ante incapacidades por luto.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> Correos automáticos de aprobación del jefe — 76 correos desde el 3 mar. Antes 2 min/correo → ahora 5 seg para 50.</div></div>
-          <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Sheets</span></div>
-        </div></div>
-      </div>
-
-      <div class="area-group">
-        <div class="area-header">
-          <span class="area-num">08</span>
-          <div class="area-name">Moderador de Canales Internos</div>
-          <div class="area-chevron">+</div>
-        </div>
-        <div class="area-body"><div class="area-content">
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Identificación de comentarios e imágenes que incumplen el código de ética.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge init">Iniciativa</span> Correos automáticos al colaborador con documento adjunto. Proceso 100% automatizado.</div></div>
-          <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Slack</span></div>
-        </div></div>
-      </div>
-
-      <div class="area-group">
-        <div class="area-header">
-          <span class="area-num">09</span>
-          <div class="area-name">Soporte y Comunidad Cali</div>
-          <div class="area-chevron">+</div>
-        </div>
-        <div class="area-body"><div class="area-content">
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Resolución de dudas a colaboradores por Slack y Gmail.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Mantener y actualizar Google Groups de Cali.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Administración de canales de Slack de la comunidad Cali.</div></div>
-          <div class="tools-row"><span class="tool-chip">Slack</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Groups</span></div>
-        </div></div>
-      </div>
+      <div class="area-body"><div class="area-content">
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Atención y soporte a los colaboradores como punto de contacto para dudas, accesos y comunicación interna.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Identificación y reporte de contenido que incumple el código de ética en los canales internos.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en la administración de los grupos y canales de la comunidad.</div></div>
+        <div class="tools-row"><span class="tool-chip">Slack</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Groups</span></div>
+      </div></div>
+    </div>
     </div>
     <button class="show-more-btn" data-extra="extra-tcbp">
       <span class="plus">+</span><span class="label">MOSTRAR MÁS FUNCIONES</span>
@@ -868,16 +845,16 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
 
   <div class="card reveal">
     <div class="card-title"><span class="card-title-num">02</span>People Journey — Gestión <span class="em">administrativa</span></div>
-
     <div class="area-group">
       <div class="area-header">
         <span class="area-num">01</span>
-        <div class="area-name">Afiliaciones EPS</div>
+        <div class="area-name">Afiliaciones y Retiros — Seguridad Social</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Contacto con colaboradores sin afiliación EPS y gestión con asesores.</div></div>
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> Formularios individuales y masivos — correo automático para el asesor. Antes 10 min/persona → ahora 30 en 10 seg.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Gestión de afiliaciones y retiros del personal ante EPS, ARL y cajas de compensación familiar, de forma individual y masiva.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en la resolución de casos pendientes con los asesores de cada entidad.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Estandarización del proceso mediante formularios y trámites automatizados.</div></div>
         <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Sheets</span></div>
       </div></div>
     </div>
@@ -885,84 +862,55 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
     <div class="area-group">
       <div class="area-header">
         <span class="area-num">02</span>
-        <div class="area-name">Afiliaciones a Caja de Compensación</div>
-        <div class="area-chevron">+</div>
-      </div>
-      <div class="area-body"><div class="area-content">
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Afiliación de new hires a caja de compensación.</div></div>
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> Afiliaciones y retiros masivos. Antes 8 min/persona → ahora 30 en 5 seg.</div></div>
-        <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Google Sheets</span></div>
-      </div></div>
-    </div>
-
-    <div class="area-group">
-      <div class="area-header">
-        <span class="area-num">03</span>
         <div class="area-name">Recobro de Incapacidades</div>
         <div class="area-chevron">+</div>
       </div>
       <div class="area-body"><div class="area-content">
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Contacto con colaboradores para documentos pendientes de incapacidad.</div></div>
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Seguimiento de radicados y estado de recobros.</div></div>
-        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> Correos automáticos de aprobación del jefe para personas con licencias pendientes.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Seguimiento al estado de los radicados y a la gestión del recobro de incapacidades ante las entidades.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en la recolección de la documentación pendiente con los colaboradores.</div></div>
         <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Sheets</span></div>
       </div></div>
     </div>
 
     <div class="extra-items" id="extra-pj">
-      <div class="area-group">
-        <div class="area-header">
-          <span class="area-num">04</span>
-          <div class="area-name">Bajas de ARL</div>
-          <div class="area-chevron">+</div>
-        </div>
-        <div class="area-body"><div class="area-content">
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Retiro de colaboradores en proceso de salida de la ARL.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> Documentos de retiro automáticos. Antes 2 min/persona → ahora 50 en 10 seg.</div></div>
-          <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Google Sheets</span></div>
-        </div></div>
+    <div class="area-group">
+      <div class="area-header">
+        <span class="area-num">03</span>
+        <div class="area-name">Desvinculación y Documentos de Retiro</div>
+        <div class="area-chevron">+</div>
       </div>
+      <div class="area-body"><div class="area-content">
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en la gestión y el envío de cartas y documentos del proceso de retiro para su respectiva firma.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Automatización de la generación de los distintos tipos de carta según la causal de desvinculación.</div></div>
+        <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Docs</span></div>
+      </div></div>
+    </div>
 
-      <div class="area-group">
-        <div class="area-header">
-          <span class="area-num">05</span>
-          <div class="area-name">Correos con Documentos de Salida</div>
-          <div class="area-chevron">+</div>
-        </div>
-        <div class="area-body"><div class="area-content">
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Envío de cartas de salida para firma del colaborador.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> 5 tipos de cartas generadas y enviadas automáticamente — 367 cartas desde el 6 feb.</div></div>
-          <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Docs</span><span class="tool-chip">Google Sheets</span></div>
-        </div></div>
+    <div class="area-group">
+      <div class="area-header">
+        <span class="area-num">04</span>
+        <div class="area-name">Gestión Documental</div>
+        <div class="area-chevron">+</div>
       </div>
+      <div class="area-body"><div class="area-content">
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en la emisión de certificados laborales y en el cargue y organización de la documentación en los sistemas internos.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Optimización de la organización masiva de archivos mediante automatización.</div></div>
+        <div class="tools-row"><span class="tool-chip">Python</span><span class="tool-chip">Google Colab</span><span class="tool-chip">People Docs</span></div>
+      </div></div>
+    </div>
 
-      <div class="area-group">
-        <div class="area-header">
-          <span class="area-num">06</span>
-          <div class="area-name">Gestión Documental</div>
-          <div class="area-chevron">+</div>
-        </div>
-        <div class="area-body"><div class="area-content">
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Emisión de certificados de trabajo para colaboradores retirados.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Carga de documentos en People Docs.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge auto">Auto</span> Renombrado masivo con Python — 20 min/100 personas → ahora 5 seg.</div></div>
-          <div class="tools-row"><span class="tool-chip">Python</span><span class="tool-chip">Google Colab</span><span class="tool-chip">People Docs</span></div>
-        </div></div>
+    <div class="area-group">
+      <div class="area-header">
+        <span class="area-num">05</span>
+        <div class="area-name">Seguimiento a Periodos de Prueba</div>
+        <div class="area-chevron">+</div>
       </div>
-
-      <div class="area-group">
-        <div class="area-header">
-          <span class="area-num">07</span>
-          <div class="area-name">Periodos de Prueba</div>
-          <div class="area-chevron">+</div>
-        </div>
-        <div class="area-body"><div class="area-content">
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Contacto con jefe para feedback de colaboradores en periodo de prueba.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Seguimiento de fechas de vencimiento de periodos de prueba.</div></div>
-          <div class="fn-item"><div class="fn-dot"></div><div class="fn-text"><span class="fn-badge init">Iniciativa</span> Correos masivos automáticos al jefe — 212 correos desde el 13 feb.</div></div>
-          <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Sheets</span></div>
-        </div></div>
-      </div>
+      <div class="area-body"><div class="area-content">
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Seguimiento a las fechas de vencimiento de los periodos de prueba.</div></div>
+        <div class="fn-item"><div class="fn-dot"></div><div class="fn-text">Apoyo en la recolección de la retroalimentación de los líderes.</div></div>
+        <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Sheets</span></div>
+      </div></div>
+    </div>
     </div>
     <button class="show-more-btn" data-extra="extra-pj">
       <span class="plus">+</span><span class="label">MOSTRAR MÁS FUNCIONES</span>
@@ -979,51 +927,107 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
     <div class="pane-meta">TCBP · People Journey · Compartidas</div>
   </div>
 
-  <div class="card reveal">
-    <div class="card-title"><span class="card-title-num">A</span>TCBP <span class="em">— 10 flujos</span></div>
-    <div class="auto-grid">
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">01</div><div class="auto-title">Correos seguridad NH</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Envío automático de datos de new hires al área de seguridad.</div><div class="auto-stat">49 correos desde 13 feb · AppScript + Gmail</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Onboarding</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">02</div><div class="auto-title">Correos detalle de luto</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Correos automáticos de aprobación del jefe ante situaciones de luto.</div><div class="auto-stat">76 correos · 5 seg para 50 vs. 2 min por correo antes</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Luto</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">03</div><div class="auto-title">Entrenamientos mandatorios</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Recordatorio automático en Google Calendar para new hires con entrenamientos obligatorios.</div><div class="auto-stat">104 recordatorios desde 30 mar · Calendar</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Calendar</span><span class="tool-chip">Onboarding</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">04</div><div class="auto-title">Sincronización de datos NH</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Información de new hires se trae automáticamente a 2 archivos corporativos.</div><div class="auto-stat">Sync en tiempo real · AppScript + Sheets</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">Onboarding</span></div></div>
-      <div class="auto-extra" id="auto-extra-tcbp">
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">05</div>
-    <div class="auto-title">Base de datos de activos</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Colaboradores activos siempre actualizados sin descargar informes diarios.</div><div class="auto-stat">Actualización diaria automática · Iniciativa propia</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">Iniciativa</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">06</div><div class="auto-title">Lista cumpleañeros PPT</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Presentación semanal automática para Bogotá, Medellín, Cali y Eje Cafetero.</div><div class="auto-stat">Revisa 6.000 filas · Genera en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Slides</span><span class="tool-chip">Comunidad</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">07</div><div class="auto-title">Acompañamiento Parental</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">7 flujos en uno: 6 correos secuenciados (bienvenida → diploma) + invitation Calendar.</div><div class="auto-stat">Proceso 100% autónomo con triggers</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Calendar</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">08</div><div class="auto-title">Página de Gift Cards</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Plataforma web interactiva — colaboradores eligen su gift card sin intervención manual.</div><div class="auto-stat">HTML/CSS/JS · Iniciativa propia</div></div></div><div class="auto-tags"><span class="tool-chip">HTML</span><span class="tool-chip">JavaScript</span><span class="tool-chip">Comunidad</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">09</div><div class="auto-title">Red de Talento Interno</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Cartas de labor automáticas + 4 correos de incumplimiento + mensajes masivos Slack.</div><div class="auto-stat">AppScript + Gmail + Slack + Docs</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Slack</span><span class="tool-chip">Docs</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">10</div><div class="auto-title">Código de Ética</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Correo automático notificando incumplimientos del código con documento adjunto.</div><div class="auto-stat">Iniciativa propia · AppScript + Gmail</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Slack</span></div></div>
-      </div>
-    <button class="show-more-btn" data-extra="auto-extra-tcbp">
-      <span class="plus">+</span><span class="label">Ver 6 automatizaciones más</span>
-    </button>
-    </div>
+  <div class="auto-summary reveal">
+    <b>28</b> automatizaciones activas <span>·</span> agrupadas en 7 tipos de proceso <span>·</span> en producción desde feb 2026
   </div>
 
-  <div class="card reveal">
-    <div class="card-title"><span class="card-title-num">B</span>People Journey <span class="em">— 7 flujos</span></div>
-    <div class="auto-grid">
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">11</div><div class="auto-title">EPS masiva e individual</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Formularios PDF de afiliación EPS + correo automático con adjunto para el asesor.</div><div class="auto-stat">10 min/persona → 30 personas en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">EPS</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">12</div><div class="auto-title">ARL Altas</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Documentos de afiliación masiva a ARL generados automáticamente.</div><div class="auto-stat">2 min/persona → 50 en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">ARL</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">13</div><div class="auto-title">ARL Bajas</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Documentos de retiro masivo de ARL para colaboradores en proceso de salida.</div><div class="auto-stat">2 min/persona → 50 en 10 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">ARL</span></div></div>
-      <div class="auto-item"><div class="auto-item-header"><div class="auto-num">14</div><div class="auto-title">Cajas de Compensación</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Afiliaciones y retiros masivos de caja de compensación (Colfondos) automatizados.</div><div class="auto-stat">8 min/persona → 30 en 5 seg</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Sheets</span><span class="tool-chip">Colfondos</span></div></div>
-      <div class="auto-extra" id="auto-extra-pj">
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">15</div>
-    <div class="auto-title">Renombrar documentos</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Renombrado masivo con Python — 3 tipos de documentos.</div><div class="auto-stat">20 min/100 → 5 seg · Python + Colab</div></div></div><div class="auto-tags"><span class="tool-chip">Python</span><span class="tool-chip">Colab</span><span class="tool-chip">Docs</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">16</div><div class="auto-title">Correos periodos de prueba</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Correos masivos automáticos al jefe para feedback en periodo de prueba.</div><div class="auto-stat">212 correos desde 13 feb · Iniciativa</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Iniciativa</span></div></div>
-        <div class="auto-item"><div class="auto-item-header"><div class="auto-num">17</div><div class="auto-title">Cartas de salida</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">5 tipos de carta generadas y enviadas: renuncia, terminación, mutuo acuerdo, prueba, practicantes.</div><div class="auto-stat">367 cartas desde 6 feb</div></div></div><div class="auto-tags"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Docs</span></div></div>
+  <div class="auto-cat-grid">
+    <div class="auto-cat reveal">
+      <div class="auto-cat-top">
+        <div class="auto-cat-count">8<small>flujos</small></div>
+        <div class="auto-cat-name">Generación masiva de documentos</div>
       </div>
-    <button class="show-more-btn" data-extra="auto-extra-pj">
-      <span class="plus">+</span><span class="label">Ver 3 automatizaciones más</span>
-    </button>
+      <div class="auto-cat-desc">Generación automática de documentos, hojas de cálculo, presentaciones y PDF mediante plantillas que se rellenan a partir de la conexión con una hoja de cálculo.</div>
+      <div class="auto-impact"><b>Procesos impactados</b>Generación de formularios de afiliación y retiro de seguridad social (EPS, ARL y cajas), cartas laborales y la presentación semanal de cumpleañeros a nivel nacional.</div>
+      <div class="auto-metric-grid">
+        <div class="auto-metric"><div class="v">+800</div><div class="k">documentos generados</div></div>
+        <div class="auto-metric"><div class="v">≈ 55 h</div><div class="k">de trabajo manual reducidas</div></div>
+      </div>
+      <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Google Sheets</span><span class="tool-chip">Google Docs</span><span class="tool-chip">Slides</span><span class="tool-chip">Drive</span></div>
     </div>
-  </div>
 
-  <div class="card reveal">
-    <div class="card-title"><span class="card-title-num">C</span>Compartidas <span class="em">— continuidad</span></div>
-    <div class="auto-grid">
-      <div class="auto-item" style="grid-column:1/-1"><div class="auto-item-header"><div class="auto-num">18</div><div class="auto-title">Manuales interactivos</div><div class="auto-chevron">+</div></div><div class="auto-item-body"><div class="auto-item-body-inner"><div class="auto-desc">Paso a paso con videos tutoriales, links a carpetas, documentos y páginas para cada automatización — garantiza continuidad ante rotación.</div><div class="auto-stat">Un manual por proceso · cubre las 18</div></div></div><div class="auto-tags"><span class="tool-chip">Google Sites</span><span class="tool-chip">Video</span><span class="tool-chip">Continuidad</span></div></div>
+    <div class="auto-cat reveal">
+      <div class="auto-cat-top">
+        <div class="auto-cat-count">9<small>flujos</small></div>
+        <div class="auto-cat-name">Envío de correos masivos</div>
+      </div>
+      <div class="auto-cat-desc">Envío automático de correos con notificaciones y aprobaciones mediante la conexión de una hoja de cálculo con el correo y el uso de HTMLs, eliminando la redacción uno a uno.</div>
+      <div class="auto-impact"><b>Procesos impactados</b>Seguridad de nuevos ingresos, acompañamiento en duelo, periodos de prueba, recobro de incapacidades y código de ética.</div>
+      <div class="auto-metric-grid">
+        <div class="auto-metric"><div class="v">+600</div><div class="k">correos enviados</div></div>
+        <div class="auto-metric"><div class="v">≈ 20 h</div><div class="k">de redacción manual reducidas</div></div>
+      </div>
+      <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Gmail</span><span class="tool-chip">Google Sheets</span><span class="tool-chip">Google Docs</span></div>
+    </div>
+
+    <div class="auto-cat reveal">
+      <div class="auto-cat-top">
+        <div class="auto-cat-count">3<small>flujos</small></div>
+        <div class="auto-cat-name">Sincronización de bases de datos</div>
+      </div>
+      <div class="auto-cat-desc">Actualización automática con el cruce de diferentes bases de datos y hojas de calculo, sin formulas ni transcripción manual de datos.</div>
+      <div class="auto-impact"><b>Procesos impactados</b>Reporte de nuevos ingresos, base de colaboradores activos y consolidación de datos para reportes mensuales de engagement.</div>
+      <div class="auto-metric-grid">
+        <div class="auto-metric"><div class="v">6.000</div><div class="k">filas actualizadas a diario</div></div>
+        <div class="auto-metric"><div class="v">≈ 10 h</div><div class="k">mensuales reducidas</div></div>
+      </div>
+      <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Google Sheets</span></div>
+    </div>
+
+    <div class="auto-cat reveal">
+      <div class="auto-cat-top">
+        <div class="auto-cat-count">2<small>flujos</small></div>
+        <div class="auto-cat-name">Recordatorios y agendamiento</div>
+      </div>
+      <div class="auto-cat-desc">Programación automática de invitaciones y recordatorios en Google Calendar para procesos con fechas críticas.</div>
+      <div class="auto-impact"><b>Procesos impactados</b>Entrenamientos obligatorios de incorporación y programa de acompañamiento parental.</div>
+      <div class="auto-metric-grid">
+        <div class="auto-metric"><div class="v">+104</div><div class="k">recordatorios programados</div></div>
+        <div class="auto-metric"><div class="v">100 %</div><div class="k">gestión automática del calendario</div></div>
+      </div>
+      <div class="tools-row"><span class="tool-chip">AppScript</span><span class="tool-chip">Google Calendar</span></div>
+    </div>
+
+    <div class="auto-cat reveal">
+      <div class="auto-cat-top">
+        <div class="auto-cat-count">2<small>flujos</small></div>
+        <div class="auto-cat-name">Renombrado y organización de archivos</div>
+      </div>
+      <div class="auto-cat-desc">Renombrado y organización masiva de archivos en segundos para su correcto cargue en los sistemas internos.</div>
+      <div class="auto-impact"><b>Procesos impactados</b>Cargue documental en People Docs y ordenamiento de soportes de los colaboradores.</div>
+      <div class="auto-metric-grid">
+        <div class="auto-metric"><div class="v">+1.000</div><div class="k">archivos organizados</div></div>
+        <div class="auto-metric"><div class="v">20 min → 5 s</div><div class="k">por cada 100 archivos</div></div>
+      </div>
+      <div class="tools-row"><span class="tool-chip">Python</span><span class="tool-chip">Google Colab</span><span class="tool-chip">Drive</span></div>
+    </div>
+
+    <div class="auto-cat reveal">
+      <div class="auto-cat-top">
+        <div class="auto-cat-count">2<small>flujos</small></div>
+        <div class="auto-cat-name">Plataformas y experiencia</div>
+      </div>
+      <div class="auto-cat-desc">Desarrollo de herramientas propias de autoservicio (Páginas Web, HTML, Dashboards) para mejorar la experiencia de los colaboradores.</div>
+      <div class="auto-impact"><b>Procesos impactados</b>Entrega de gift cards (página web de autoservicio) y presentación nacional de cumpleañeros.</div>
+      <div class="auto-metric-grid">
+        <div class="auto-metric"><div class="v">2</div><div class="k">herramientas de IA</div></div>
+        <div class="auto-metric"><div class="v">4</div><div class="k">ciudades con cobertura nacional</div></div>
+      </div>
+      <div class="tools-row"><span class="tool-chip">HTML / CSS / JS</span><span class="tool-chip">Slides</span></div>
+    </div>
+
+    <div class="auto-cat reveal" style="grid-column:1/-1">
+      <div class="auto-cat-top">
+        <div class="auto-cat-count">2<small>flujos</small></div>
+        <div class="auto-cat-name">Documentación y continuidad</div>
+      </div>
+      <div class="auto-cat-desc">Elaboración de manuales interactivos con video paso a paso para cada automatización, asegurando la continuidad operativa del área.</div>
+      <div class="auto-impact"><b>Procesos impactados</b>Documentación de las 28 automatizaciones y transferencia de conocimiento ante rotación del equipo.</div>
+      <div class="auto-metric-grid">
+        <div class="auto-metric"><div class="v">28</div><div class="k">procesos documentados</div></div>
+        <div class="auto-metric"><div class="v">1</div><div class="k">manual interactivo por área</div></div>
+      </div>
+      <div class="tools-row"><span class="tool-chip">Google Sites</span><span class="tool-chip">Video</span></div>
     </div>
   </div>
 </div>
@@ -1032,32 +1036,56 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
   <div class="pane-header reveal">
     <div>
       <div class="pane-eyebrow">Sección 04</div>
-      <h2>Iniciativas <span class="em">propias.</span></h2>
+      <h2>Iniciativas <span class="em">propias</span> y valor.</h2>
     </div>
-    <div class="pane-meta">Propuestas y lideradas en autonomía</div>
+    <div class="pane-meta">Qué propuse · Qué aporta al área</div>
   </div>
 
   <div class="init-grid">
-    <div class="init-card reveal"><div class="init-num">N°01</div><div class="init-title">Club de <span class="em">Cine</span></div><div class="init-desc">Espacio cultural para la comunidad Cali dentro del sitio de trabajo. Proyecciones cada 15 días con ~22 asistentes. Fomenta bienestar, cultura, mayor presencialidad y sentido de pertenencia.</div></div>
-    <div class="init-card reveal"><div class="init-num">N°02</div><div class="init-title">Página de <span class="em">Gift Cards</span></div><div class="init-desc">Plataforma web propia desarrollada desde cero. Elimina el proceso manual de consulta de gift cards y permite a los colaboradores elegir su regalo de forma autónoma.</div></div>
-    <div class="init-card reveal"><div class="init-num">N°03</div><div class="init-title">PPT de <span class="em">Cumpleañeros</span></div><div class="init-desc">Presentación semanal generada automáticamente para Bogotá, Medellín, Cali y Eje Cafetero. Incluye a todos los colaboradores Colombia. Evita una tarea repetitiva semanal.</div></div>
-    <div class="init-card reveal"><div class="init-num">N°04</div><div class="init-title">Archivo de <span class="em">Activos</span></div><div class="init-desc">Base de datos centralizada y actualizada automáticamente cada día sin descargar informes. Brinda visibilidad inmediata sobre el personal activo.</div></div>
-    <div class="init-card reveal"><div class="init-num">N°05</div><div class="init-title">Correos clave <span class="em">automatizados</span></div><div class="init-desc">Propuse y construí los correos automáticos para seguridad NH, periodos de prueba, luto y cartas de salida — punto de partida de todas las automatizaciones del área.</div></div>
-    <div class="init-card reveal"><div class="init-num">N°06</div><div class="init-title">Manuales <span class="em">interactivos</span></div><div class="init-desc">Paso a paso documentado con videos tutoriales, links a carpetas, documentos y páginas para cada automatización. Garantiza continuidad ante cualquier rotación.</div></div>
-  </div>
-</div>
-
-<div class="pane" id="pane-valor">
-  <div class="pane-header reveal">
-    <div>
-      <div class="pane-eyebrow">Sección 06</div>
-      <h2>Valor <span class="em">agregado</span> al área.</h2>
+    <div class="init-card reveal">
+      <div class="init-num">N°01</div>
+      <div class="init-title">Club de <span class="em">Cine</span></div>
+      <div class="init-desc"><b>Qué es</b>Espacio cultural para la comunidad Cali dentro del sitio de trabajo, con proyecciones cada 15 días y ~22 asistentes.</div>
+      <div class="init-aporta"><b>Qué aporta</b>Mayor presencialidad —venir a la oficina es un reto en una empresa híbrida— sumada a bienestar, cultura y sentido de pertenencia.</div>
     </div>
-    <div class="pane-meta">Impacto cualitativo en TCBP y People Journey</div>
+    <div class="init-card reveal">
+      <div class="init-num">N°02</div>
+      <div class="init-title">Página de <span class="em">Gift Cards</span></div>
+      <div class="init-desc"><b>Qué es</b>Plataforma web propia desarrollada desde cero para la entrega de regalos.</div>
+      <div class="init-aporta"><b>Qué aporta</b>Elimina el proceso manual de consulta y permite a los colaboradores elegir su regalo de forma autónoma.</div>
+    </div>
+    <div class="init-card reveal">
+      <div class="init-num">N°03</div>
+      <div class="init-title">PPT de <span class="em">Cumpleañeros</span></div>
+      <div class="init-desc"><b>Qué es</b>Presentación semanal generada automáticamente para Bogotá, Medellín, Cali y Eje Cafetero.</div>
+      <div class="init-aporta"><b>Qué aporta</b>Fortalece el compañerismo: da visibilidad a las fechas especiales e invita a los colaboradores a felicitarse entre sí, además de liberar una tarea repetitiva cada semana.</div>
+    </div>
+    <div class="init-card reveal">
+      <div class="init-num">N°04</div>
+      <div class="init-title">Archivo de <span class="em">Activos</span></div>
+      <div class="init-desc"><b>Qué es</b>Base de datos centralizada y actualizada automáticamente cada día, sin descargar informes.</div>
+      <div class="init-aporta"><b>Qué aporta</b>Da visibilidad inmediata del personal activo a todo el equipo, en tiempo real.</div>
+    </div>
+    <div class="init-card reveal">
+      <div class="init-num">N°05</div>
+      <div class="init-title">Correos clave <span class="em">automatizados</span></div>
+      <div class="init-desc"><b>Qué es</b>Correos automáticos para procesos como: ingreso de NH, periodos de prueba y cartas de salida.</div>
+      <div class="init-aporta"><b>Qué aporta</b>Fueron el punto de partida y el catalizador de todas las automatizaciones del área.</div>
+    </div>
+    <div class="init-card reveal">
+      <div class="init-num">N°06</div>
+      <div class="init-title">Manuales <span class="em">interactivos</span></div>
+      <div class="init-desc"><b>Qué es</b>Paso a paso documentado con videos tutoriales para cada automatización.</div>
+      <div class="init-aporta"><b>Qué aporta</b>Garantiza continuidad ante cualquier rotación; el conocimiento queda documentado y accesible.</div>
+    </div>
+  </div>
+
+  <div class="impact-section reveal" style="margin-top:44px;margin-bottom:18px">
+    <div class="impact-section-title">Qué <span class="em">transforma</span> en el área</div>
   </div>
 
   <div class="valor-grid reveal">
-    <div class="valor-item"><div class="valor-num">01</div><div class="valor-title">Reducción de tiempos operativos</div><div class="valor-desc">Procesos que tomaban horas ahora se completan en segundos. AppScript y Colab eliminan la tarea manual repetitiva en TCBP y People Journey.</div></div>
+    <div class="valor-item"><div class="valor-num">01</div><div class="valor-title">Reducción de tiempos operativos</div><div class="valor-desc">Procesos que tomaban horas ahora se completan en segundos. AppScript y Colab eliminan la tarea manual repetitiva en RRHH.</div></div>
     <div class="valor-item"><div class="valor-num">02</div><div class="valor-title">Estandarización de procesos</div><div class="valor-desc">Formatos únicos y flujos consistentes reducen errores humanos. Cada proceso tiene un estándar definido y automatizado.</div></div>
     <div class="valor-item"><div class="valor-num">03</div><div class="valor-title">Escalabilidad real</div><div class="valor-desc">Las primeras automatizaciones generaron confianza en el área. Eso llevó de 0 a 28 automatizaciones activas en menos de 4 meses.</div></div>
     <div class="valor-item"><div class="valor-num">04</div><div class="valor-title">Mejor experiencia del colaborador</div><div class="valor-desc">Club de Cine, página de regalos y alianzas (AudioVisión, EntreRíos) contribuyen al sentido de pertenencia y bienestar en Cali.</div></div>
@@ -1080,7 +1108,7 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
     <div class="kpi"><div class="kpi-val" data-target="808">0</div><div class="kpi-lbl">Correos automáticos enviados</div></div>
     <div class="kpi"><div class="kpi-val" data-target="4">0</div><div class="kpi-lbl">Meses en producción</div></div>
     <div class="kpi stars">
-      <div class="kpi-val" data-target="221">0</div>
+      <div class="kpi-val" data-target="249">0</div>
       <div class="kpi-lbl">Estrellas recibidas</div>
       <div class="star-row">★ ★ ★ ★ ★</div>
     </div>
@@ -1100,7 +1128,7 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
 
   <div class="chart-grid reveal">
     <div class="chart-box" style="grid-column:1/-1">
-      <h3>Tiempo <span class="em">ahorrado</span> por proceso · minutos antes vs. segundos ahora</h3>
+      <h3>Tiempo <span class="em">ahorrado</span> por proceso · horas antes vs. segundos ahora</h3>
       <div class="chart-wrap"><canvas id="chartTime"></canvas></div>
     </div>
   </div>
@@ -1137,7 +1165,7 @@ html:not(.light) .theme-toggle .moon, html.light .theme-toggle .sun { color: var
 
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* Lógica de pestañas interactivas */
 (function(){
   const items = document.querySelectorAll('.side-menu-item');
@@ -1350,7 +1378,7 @@ function buildCharts(){
   };
 
   const flows = ['Cartas salida', 'ARL', 'EPS', 'Cartas labor', 'Cajas comp.'];
-  const vals  = [367, 45, 29, 14, 11];
+  const vals  = [467, 305, 79, 24, 21];
   new Chart(document.getElementById('chartBar'), {
     type: 'bar',
     data: {
@@ -1376,7 +1404,7 @@ function buildCharts(){
     plugins: [dataLabelPlugin]
   });
 
-  const donutLabels = ['Cartas salida (367)','Correos prueba (212)','Entrenam. (104)','Luto (76)','Seguridad NH (49)'];
+  const donutLabels = ['Cartas salida (467)','Correos prueba (212)','Entrenam. (104)','Luto (76)','Seguridad NH (59)'];
   const donutColors = [t.amber, t.teal, t.green, t.rose, t.extra];
 
   const donutLabelsPlugin = {
@@ -1437,8 +1465,10 @@ function buildCharts(){
   }
 
   const procs   = ['Correos luto (50)','EPS individual (30)','ARL Altas (50)','ARL Bajas (50)','Cajas comp. (30)','Renombrar (100)'];
-  const before  = [100, 300, 100, 100, 240, 20];
-  const afterS  = [5, 10, 10, 10, 5, 5];
+  const beforeMin = [100, 300, 100, 100, 240, 20];
+  const beforeH = beforeMin.map(m => m/60);
+  const afterSec = [5, 10, 10, 10, 5, 5];
+  const afterH  = afterSec.map(s => s/3600);
 
   new Chart(document.getElementById('chartTime'), {
     type: 'bar',
@@ -1446,16 +1476,20 @@ function buildCharts(){
       labels: procs,
       datasets: [
         {
-          label: 'Antes (min)',
-          data: before,
+          label: 'Antes (horas)',
+          data: beforeH,
           backgroundColor: t.rose,
-          borderRadius: 3
+          borderRadius: 3,
+          minBarLength: 4
         },
         {
-          label: 'Ahora (seg)',
-          data: afterS,
+          label: 'Ahora (segundos)',
+          data: afterH,
           backgroundColor: t.amber,
-          borderRadius: 3
+          borderRadius: 3,
+          minBarLength: 18,
+          borderColor: t.amber,
+          borderWidth: 1
         }
       ]
     },
@@ -1464,17 +1498,19 @@ function buildCharts(){
       responsive: true,
       maintainAspectRatio: false,
       animation: {duration:1100, easing:'easeOutCubic'},
-      layout:{padding:{right:48}},
+      layout:{padding:{right:56}},
       plugins: {
         legend: {position:'top', labels:{color:t.ink2, font:{size:10}, boxWidth:10}},
         tooltip: {
           callbacks: {
-            label: ctx => ctx.dataset.label + ': ' + ctx.parsed.x + (ctx.datasetIndex === 0 ? ' min' : ' seg')
+            label: ctx => ctx.datasetIndex === 0
+              ? 'Antes: ' + beforeH[ctx.dataIndex].toFixed(1).replace('.0','') + ' h'
+              : 'Ahora: ' + afterSec[ctx.dataIndex] + ' seg'
           }
         }
       },
       scales: {
-        x: {ticks:{color:t.muted, font:{size:10}}, grid:{color:t.line}, beginAtZero:true},
+        x: {ticks:{color:t.muted, font:{size:10}, callback:v=>v+' h'}, grid:{color:t.line}, beginAtZero:true},
         y: {ticks:{color:t.muted, font:{size:10}}, grid:{display:false}}
       }
     },
@@ -1489,11 +1525,11 @@ function buildCharts(){
         chart.data.datasets.forEach((ds, di) => {
           const meta = chart.getDatasetMeta(di);
           meta.data.forEach((bar, i) => {
-            const v = ds.data[i];
-            if (v == null) return;
             ctx.fillStyle = di === 0 ? t.rose : t.amber;
-            const unit = di === 0 ? ' min' : ' seg';
-            ctx.fillText(v + unit, bar.x + 6, bar.y);
+            const text = di === 0
+              ? beforeH[i].toFixed(1).replace('.0','') + ' h'
+              : afterSec[i] + ' seg';
+            ctx.fillText(text, bar.x + 6, bar.y);
           });
         });
         ctx.restore();
